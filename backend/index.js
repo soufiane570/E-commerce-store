@@ -1,41 +1,6 @@
-// // Importing required modules
-// const express = require('express');
-// const mongoose = require('mongoose');
-
-// // Create an instance of Express
-// const app = express();
-
-// // Middleware to parse JSON
-// app.use(express.json());
-
-// // Connect to MongoDB using Mongoose
-// mongoose.connect('mongodb://localhost:27017/ecom_store', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// // Verify connection
-// mongoose.connection.on('connected', () => {
-//   console.log('Connected to MongoDB');
-// });
-
-// mongoose.connection.on('error', (err) => {
-//   console.error(`MongoDB connection error: ${err}`);
-// });
-
-// // Define a simple route
-// app.get('/', (req, res) => {
-//   res.send('Hello, World!');
-// });
-
-// // Start the server
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
 const express = require('express');
 const mongoose = require('mongoose');
-
+const URL =  `mongodb+srv://soufianehamdach28:OtP0M6eboDrOIONK@cluster0.7zlyvms.mongodb.net/ecom_store`; 
 const userRoutes = require('./Routes/userRoutes');
 const productRoutes = require('./Routes/productRoutes');
 const categoryRoutes = require('./Routes/categoryRoutes');
@@ -56,7 +21,7 @@ app.use(orderRoutes);
 app.use(orderDetailRoutes);
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/ecom_store', {
+mongoose.connect(URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useCreateIndex: true,
