@@ -1,0 +1,7 @@
+# Ignore les modules Node.js
+node_modules/
+
+# Autres fichiers généralement ignorés dans les projets Node.js
+npm-debug.log
+yarn-error.log
+
