@@ -8,6 +8,7 @@ const userSchema = new Schema({
     password: { type: String, required: true },
     address: String,
     phone: String,
+    role: { type: String, enum: ['admin', 'user', 'guest'], default: 'guest' },
     created_at: { type: Date, default: Date.now },
     updated_at: { type: Date, default: Date.now }
 });
