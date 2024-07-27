@@ -17,7 +17,7 @@ const supportRoutes = require('./Routes/supportRoutes');
 const wishlistRoutes = require('./Routes/wishlistRoutes')
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Middleware
 app.use(express.json());
